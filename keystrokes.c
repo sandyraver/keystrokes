@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -33,7 +34,8 @@ int main(int argc, char **argv)
 			{
 				if ( ev.code == 36 && ev.value > 0)
 				{
-					cout << "fuck yeah " << endl;
+					//cout << "fuck yeah " << endl;
+					system("firefox");
 				}
 			}
 			cout << "Key "<< ev.code << " state "<< ev.value << endl;
